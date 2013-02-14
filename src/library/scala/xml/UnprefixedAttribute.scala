@@ -31,7 +31,7 @@ extends Attribute
     this(key, value.orNull, next)
 
   /** returns a copy of this unprefixed attribute with the given next field*/
-  def copy(next: MetaData) = new UnprefixedAttribute(key, value, next)
+  def copy(next: MetaData) = new UnprefixedAttribute(key, value, next1.copy(next))
 
   final def getNamespace(owner: Node): String = null
 
